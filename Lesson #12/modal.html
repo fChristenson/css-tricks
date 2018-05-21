@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <button onclick="openModal()">Open</button>
+  <div class="overlay" data-js="overlay">
+    <div class="modal" data-js="modal">
+      <header>
+        <h2>Header</h2>
+        <button onclick="closeModal()" role="close modal">X</button>
+      </header>
+      <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit explicabo ratione, illum eaque fuga vero! Quam officia
+        nemo, praesentium ipsa odit nihil autem deleniti ab accusantium officiis dolor delectus labore?</section>
+    </div>
+  </div>
+  <script>
+    const overlay = document.querySelector("[data-js=overlay]")
+    const modal = document.querySelector("[data-js=modal]")
+
+    overlay.addEventListener("click", e => {
+      // we only want to close the modal if we click on the overlay
+      if (e.target === overlay) {
+        closeModal();
+      }
+    })
+
+    function openModal() {
+      overlay.classList.add("overlay--open");
+      modal.classList.add("modal--open");
+    }
+
+    function closeModal() {
+      modal.classList.remove("modal--open");
+      modal.classList.add("modal--hide");
+      setTimeout(() => {
+        overlay.classList.remove("overlay--open");
+        modal.classList.remove("modal--hide");
+      }, 400);
+    }
+  </script>
+</body>
+
+</html>

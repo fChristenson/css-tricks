@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  color: white;
+  padding: 16px;
+}
+
+.hover {
+  display: inline-block;
+  position: relative;
+}
+.hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

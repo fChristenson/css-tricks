@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./pin.js.css">
+</head>
+
+<body>
+  <main>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, praesentium ex facere error architecto enim nostrum fuga
+      odit. Minima voluptates qui, tempore iure animi inventore quam deleniti ea expedita illo!</p>
+  </main>
+  <aside></aside>
+  <script>
+    const aside = document.querySelector("aside");
+
+    // be careful with scroll, it can get very unperformant
+    document.addEventListener("scroll", e => {
+      // always use requestAnimationFrame if you can
+      // it will let the browser decide when there is "time"
+      // to repaint the screen with the animation change
+      requestAnimationFrame(() => {
+        const yPos = window.pageYOffset;
+        const transform = `translate3d(0, ${yPos}px, 0)`;
+        aside.style.transform = transform;
+      });
+    });
+  </script>
+</body>
+
+</html>

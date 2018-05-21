@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  color: white;
+  padding: 16px;
+}
+
+p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}

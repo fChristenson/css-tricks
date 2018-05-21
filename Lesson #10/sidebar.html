@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <aside data-js="sidebar">
+    <ul>
+      <li>
+        <a href="#">foo</a>
+      </li>
+      <li>
+        <a href="#">bar</a>
+      </li>
+      <li>
+        <a href="#">baz</a>
+      </li>
+    </ul>
+    <div data-js="click-catcher"></div>
+  </aside>
+  <button onclick="openSidebar()">Toggle sidebar</button>
+  <script>
+    const sidebar = document.querySelector("[data-js=sidebar]");
+    // this is important, a click catcher will make it possible to click away
+    // the sidebar and still be able to click the elements
+    const clickCatcher = document.querySelector("[data-js=click-catcher]");
+    clickCatcher.addEventListener("click", e => {
+      sidebar.classList.toggle("sidebar--open");
+    });
+
+    function openSidebar() {
+      sidebar.classList.toggle("sidebar--open");
+    }
+  </script>
+</body>
+
+</html>

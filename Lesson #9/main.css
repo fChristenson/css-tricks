@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 8px;
+  background: steelblue;
+  color: ghostwhite;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  padding: 8px 0;
+}

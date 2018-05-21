@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      overflow: hidden;
+      font-size: 28px;
+    }
+
+    ul {
+      transition: transform 0.3s ease-in;
+      height: 100vh;
+      width: 400%;
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      flex: 1 1 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .one {
+      background: steelblue;
+    }
+
+    .two {
+      background: crimson;
+    }
+
+    .three {
+      background: green;
+    }
+
+    .four {
+      background: blueviolet;
+    }
+
+    /*Use transforms to leverage the GPU*/
+
+    .show-two {
+      transform: translate3d(-25%, 0, 0);
+    }
+
+    .show-three {
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    .show-four {
+      transform: translate3d(-75%, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <ul data-js="ul">
+      <li class="one" data-js="one">1</li>
+      <li class="two" data-js="two">2</li>
+      <li class="three" data-js="three">3</li>
+      <li class="four" data-js="four">4</li>
+    </ul>
+  </main>
+  <script>
+    /*
+      Using this method we can create a slide show
+      or a carousel or a mobile feeling flow of views.
+      Multiple views, no page refresh!
+    */
+    const ul = document.querySelector("[data-js=ul]");
+    const one = document.querySelector("[data-js=one]");
+    const two = document.querySelector("[data-js=two]");
+    const three = document.querySelector("[data-js=three]");
+    const four = document.querySelector("[data-js=four]");
+
+    one.addEventListener("click", e => {
+      ul.classList.toggle("show-two");
+    });
+
+    two.addEventListener("click", e => {
+      ul.classList.toggle("show-three");
+    });
+
+    three.addEventListener("click", e => {
+      ul.classList.toggle("show-four");
+    });
+
+    four.addEventListener("click", e => {
+      ul.classList.remove("show-two");
+      ul.classList.remove("show-three");
+      ul.classList.remove("show-four");
+    });
+  </script>
+</body>
+
+</html>

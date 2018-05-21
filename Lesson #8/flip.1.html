@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./flip.1.css">
+</head>
+
+<body>
+  <div id="box"></div>
+  <script>
+    const box = document.getElementById("box");
+    document.addEventListener("click", e => {
+      // remove animate so we can run the fullscreen change
+      // get the values and apply the transform all in one screen
+      box.classList.remove("animate");
+      // grab start data
+      const startDims = box.getBoundingClientRect();
+      // apply class or remove it to let the browser calculate the change
+      box.classList.toggle("fullscreen");
+      // get the end data
+      const endDims = box.getBoundingClientRect();
+
+      // we log out the dimension objects to see the diff
+      console.log(startDims, endDims);
+      console.log('--------------------------');
+
+      // grab the diff in changes
+      const x = startDims.left - endDims.left;
+      const y = startDims.top - endDims.top;
+      const sx = startDims.width / endDims.width;
+      const sy = startDims.height / endDims.height;
+
+      // apply a translate that uses the diff as the values
+      // the element now looks like it has its original dimensions
+      box.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${sx}, ${sy})`;
+
+      // requestAnimationFrame to get that extra performance boost
+      requestAnimationFrame(() => {
+        // add the animation class so when we remove the transform the animation
+        // runs correctly
+        box.classList.add("animate");
+        box.style.transform = "";
+      });
+    });
+  </script>
+</body>
+
+</html>

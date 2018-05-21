@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 12px;
+}
+
+h1, h2 {
+  font-family: serif;
+}
+
+h1 {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  padding: 0 20px;
+}
+
+hr {
+  flex: 1 1 auto;
+  height: 1px;
+  color:#999
+}

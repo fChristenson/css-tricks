@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  color: white;
+}
+
+div[data-js="content"] {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.hover-me:hover > div[data-js="content"] {
+  max-height: var(--max-height);
+}

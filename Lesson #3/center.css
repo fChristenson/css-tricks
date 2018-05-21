@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+}
+
+.notice-list {
+  margin: 0 auto;
+  width: 320px;
+  list-style: none;
+}
+
+.notice {
+  padding: 8px;
+  background: white;
+  margin-bottom: 8px;
+}
+
+.notice__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice__img {
+  width: 44px;
+  border-radius: 50%;
+}
+
+.notice__name {
+  
+}

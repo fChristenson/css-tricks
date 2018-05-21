@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.overlay--open {
+  display: flex;
+}
+
+.modal {
+  max-width: 600px;
+  background: purple;
+  opacity: 0;
+}
+
+.modal--open {
+  animation: 0.3s show;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.modal--hide {
+  animation: 0.3s hide;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -40px, 0);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+}
+
+header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+section {
+  padding: 0 8px 18px;
+}
+
+button {
+  padding: 8px;
+  background: ghostwhite;
+}

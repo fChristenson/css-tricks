@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: steelblue;
+}
+
+div {
+  width: 50px;
+  height: 50px;
+  background: ghostwhite;
+  position: absolute;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 50px);
+  transition: all 0.5s ease-in-out
+}
+
+/* Dear god no */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}

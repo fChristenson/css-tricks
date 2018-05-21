@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="hover-me">
+    Hover me to see a height transition.
+    <div data-js="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolores magni odio architecto deleniti delectus dicta
+      nulla natus, adipisci, debitis accusamus nostrum cupiditate nihil quidem illum. Magni rem est ipsam.</div>
+  </div>
+  <script>
+    var el = document.querySelector('div[data-js="content"]');
+    var height = el.scrollHeight;
+    el.style.setProperty('--max-height', height + 'px');
+  </script>
+</body>
+
+</html>

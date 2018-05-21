@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  color: purple;
+}
+
+a:visited {
+  color: purple;
+}
+
+aside {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100vw, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding: 12px 24px;
+  flex: 0 0 auto;
+  background: olivedrab;
+}
+
+li {
+  padding: 4px;
+}
+
+div {
+  flex: 1 1 auto;
+}
+
+/* GPU ftw */
+.sidebar--open {
+  transform: translate3d(0, 0, 0);
+}
+
+button {
+  background: ghostwhite;
+  color: black;
+  padding: 8px;
+}

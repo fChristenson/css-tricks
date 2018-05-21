@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  color: ghostwhite;
+}
+
+main {
+  padding: 12px;
+  height: 100%;
+  flex: 1 1 auto;
+  background: steelblue;
+}
+
+aside {
+  height: 200px;
+  flex: 0 0 200px;
+  background: crimson;
+}
+
+p {
+  padding: 4px 0;
+  width: 100%;
+  word-wrap: break-word;
+}
