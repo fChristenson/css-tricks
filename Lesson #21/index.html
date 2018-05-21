@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="spotlight"></div>
+  <script>
+
+    const spotlight = document.querySelector(".spotlight");
+    let spotlightSize = "transparent 100px, rgba(0, 0, 0, 0.85) 160px)";
+
+    window.addEventListener("mousemove", e => {
+      requestAnimationFrame(() => updateSpotlight(e));
+    });
+
+    window.addEventListener("mousedown", e => {
+      spotlightSize = "transparent 80px, rgba(0, 0, 0, 0.95) 110px)";
+      requestAnimationFrame(() => updateSpotlight(e));
+    });
+
+    window.addEventListener("mouseup", e => {
+      spotlightSize = "transparent 100px, rgba(0, 0, 0, 0.85) 160px)";
+      requestAnimationFrame(() => updateSpotlight(e));
+    });
+
+    function updateSpotlight(e) {
+      const xPos = e.pageX / window.innerWidth * 100;
+      const yPos = e.pageY / window.innerHeight * 100;
+      spotlight.style.backgroundImage = `radial-gradient(circle at ${xPos}% ${yPos}%, ${spotlightSize}`;
+    }
+
+  </script>
+</body>
+
+</html>

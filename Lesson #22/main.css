@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+h1 {
+  color: crimson;
+  margin: 20vh auto;
+  text-align: center;
+}
+
+p {
+  color: crimson;
+  width: 400px;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+video {
+  min-width: 100%; 
+  min-height: 100%; 
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
