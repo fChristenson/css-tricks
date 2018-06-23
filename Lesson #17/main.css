@@ -14,14 +14,9 @@ ul {
   display: flex;
 }
 
-ul:hover li:not(:hover) {
-  opacity: 0.5;
-}
-
 li {
   list-style-type: none;
   padding: 0 10px;
-  transition: all 0.2s;
 }
 
 li:not(:last-child) {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="message">
+    <div class="message__container" role="button" onclick="hide()">
+      <p class="message__text">This is a message with some really important information</p>
+    </div>
+  </div>
+  <script>
+    const message = document.querySelector(".message");
+    setTimeout(() => {
+      message.classList.add("message--show");
+    }, 1000);
+
+    function hide() {
+      message.classList.remove("message--show");
+      setTimeout(() => {
+        message.classList.add("message--show");
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>

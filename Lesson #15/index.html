@@ -13,9 +13,12 @@
   <div class="hover-me">
     Hover me to see a height transition.
     <div data-js="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolores magni odio architecto deleniti delectus dicta
-      nulla natus, adipisci, debitis accusamus nostrum cupiditate nihil quidem illum. Magni rem est ipsam.</div>
+      nulla natus, adipisci, debitis accusamus nostrum cupiditate nihil quidem illum. Magni rem est ipsam. nulla natus, adipisci,
+      debitis accusamus nostrum cupiditate nihil quidem illum. Magni rem est ipsam.</div>
   </div>
   <script>
+    // we need to do this AFTER the DOM has been set so we know
+    // what the height is of the element
     var el = document.querySelector('div[data-js="content"]');
     var height = el.scrollHeight;
     el.style.setProperty('--max-height', height + 'px');

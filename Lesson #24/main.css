@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+}
+
+div {
+  width: 100px;
+  height: 50px;
+  background: gold;
+  border: crimson 5px solid;
+  margin: 10px;
+  text-align: center;
+  padding: 14px;
+}
+
+input, select {
+  border-radius: 50px;
+  width: 100px;
+  height: 50px;
+  padding: 4px;
+  margin: 0 10px;
+  border: 5px solid crimson;
+}
