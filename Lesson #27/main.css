@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loader {
+  width: 130px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.loader-bar {
+  width: 68px;
+  height: 100%;
+  background: steelblue;
+  animation: slide 0.7s alternate infinite ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-34px);
+  }
+  100% {
+    transform: translateX(96px);
+  }
+}

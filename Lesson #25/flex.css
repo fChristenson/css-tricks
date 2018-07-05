@@ -12,10 +12,13 @@ body {
   background: steelblue;
 }
 
-main div {
+main {
   min-height: calc(100vh - var(--footer-height) * 2);
-  min-width: 33%;
-  float: left;
+  display: flex;
+}
+
+main div {
+  flex: 1 1 auto;
 }
 
 main div:first-child {
@@ -34,5 +37,4 @@ nav, footer {
   height: var(--footer-height);
   text-align: center;
   color: ghostwhite;
-  clear: both;
 }

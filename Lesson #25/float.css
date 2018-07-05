@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footer-height: 40px;
+}
+
+body {
+  background: steelblue;
+}
+
+main div {
+  min-height: calc(100vh - var(--footer-height) * 2);
+  min-width: 33.33333%;
+  float: left;
+}
+
+main div:first-child {
+  background: crimson;
+}
+
+main div:nth-child(2) {
+  background: purple;
+}
+
+main div:last-child {
+  background: gold;
+}
+
+nav, footer {
+  height: var(--footer-height);
+  text-align: center;
+  color: ghostwhite;
+  clear: both; /*we need to clear the float*/
+}
