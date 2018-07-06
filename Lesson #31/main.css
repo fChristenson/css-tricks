@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  min-height: 100vh;
+}
+
+.text {
+  color: slateblue;
+  font-size: 84px;
+  font-family: roboto;
+  position: relative;
+  text-shadow: 1px 1px 1px white;
+}
+
+.text::before {
+  content: '';
+  width: 150%;
+  height: 40px;
+  position: absolute;
+  bottom: -42px;
+  left: -28%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%,rgba(255, 255, 255, 0) 75%); 
+}

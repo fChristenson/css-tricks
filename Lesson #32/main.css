@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: steelblue;
+  color: white;
+  min-height: 100vh;
+}
+
+input {
+  display: none;
+}
+
+input:checked + .scene .card {
+  transform: rotateY(180deg);
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border: 1px solid white;
+}
+
+.card__face--front,
+.card__face--back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__face--front {
+  background: slateblue;
+}
+
+.card__face--back {
+  background: crimson;
+  transform: rotateY( 180deg );
+}

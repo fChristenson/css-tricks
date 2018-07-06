@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cube flip</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div>
+    <div class="scene">
+      <div class="cube">
+        <div class="cube__face cube__face--front">front</div>
+        <div class="cube__face cube__face--back">back</div>
+        <div class="cube__face cube__face--right">right</div>
+        <div class="cube__face cube__face--left">left</div>
+        <div class="cube__face cube__face--top">top</div>
+        <div class="cube__face cube__face--bottom">bottom</div>
+      </div>
+    </div>
+    <p class="radio-group">
+      <label>
+        <input type="radio" name="rotate-cube-side" value="front" checked /> front
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="right" /> right
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="back" /> back
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="left" /> left
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="top" /> top
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
+      </label>
+    </p>
+  </div>
+  <script>
+    const cube = document.querySelector('.cube');
+    const radioGroup = document.querySelector('.radio-group');
+    let currentClass = '';
+
+    const changeSide = () => {
+      const checkedRadio = radioGroup.querySelector(':checked');
+      const showClass = 'show-' + checkedRadio.value;
+      if (currentClass) {
+        cube.classList.remove(currentClass);
+      }
+      cube.classList.add(showClass);
+      currentClass = showClass;
+    }
+
+    changeSide();
+
+    radioGroup.addEventListener('change', changeSide);
+  </script>
+</body>
+
+</html>
