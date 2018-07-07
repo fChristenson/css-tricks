@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  height: 100vh;
+  font-family: 'Roboto';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+
+.placeholder {
+  display: block;
+  transform: translate3d(4px, -21px, 0) scale(1);
+  color: black;
+  transition: all 0.3s;
+}
+
+input:focus ~ .placeholder {
+  color: white;
+  transform: translate3d(-32px, -43px, 0) scale(0.5);
+}
