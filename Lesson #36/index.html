@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>falling text</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div>
+    <span class="rest">
+      Do you know who's
+      <span class="color-word">awesome</span>, </span>
+    <span id="awesome" class="awesome-thing"></span>
+  </div>
+  <script>
+    const awesome = document.getElementById("awesome");
+    const awesomeThings = ['you', 'me', 'everyone'];
+
+    const wait = (func, timeout) => {
+      return new Promise(resolve => setTimeout(() => {
+        resolve(func());
+      }, timeout));
+    }
+
+    (async () => {
+      let index = 0;
+      while (true) {
+        await wait(() => {
+          awesome.classList.add("show");
+          awesome.textContent = awesomeThings[index];
+          index = ++index % awesomeThings.length;
+        }, 1000);
+        await wait(() => {
+          awesome.classList.add("hide");
+        }, 1500);
+
+        await wait(() => {
+          awesome.classList.remove("show");
+          awesome.classList.remove("hide");
+        }, 500);
+      }
+    })()
+  </script>
+</body>
+
+</html>

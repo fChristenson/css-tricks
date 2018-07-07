@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  font-family: 'Roboto';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  margin: 0 auto;
+  list-style: none;
+}
+
+li {
+  float: left;
+  padding: 1px;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  font-size: 24px;
+}
+
+li.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.spaced {
+  padding-left: 12px;
+}

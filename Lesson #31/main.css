@@ -8,24 +8,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.87) 30%, rgba(0, 0, 0, 0.9) 50%, black);
   min-height: 100vh;
 }
 
 .text {
   color: slateblue;
-  font-size: 84px;
+  font-size: 184px;
+  width: 100%;
+  text-align: center;
   font-family: roboto;
   position: relative;
-  text-shadow: 1px 1px 1px white;
 }
 
 .text::before {
   content: '';
-  width: 150%;
-  height: 40px;
+  width: 110%;
+  height: 120px;
   position: absolute;
-  bottom: -42px;
-  left: -28%;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%,rgba(255, 255, 255, 0) 75%); 
+  bottom: -140px;
+  left: -5%;
+  background: radial-gradient(ellipse at center, black 0%, black 15%, white 22%,rgba(255, 255, 255, 0) 70%); 
 }

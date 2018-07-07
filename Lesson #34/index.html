@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text expand</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <ul class="text hidden">
+    <li>T</li>
+    <li class="hidden">h</li>
+    <li class="hidden">i</li>
+    <li class="hidden">s</li>
+    <li class="spaced">I</li>
+    <li class="hidden">s</li>
+    <li class="spaced">S</li>
+    <li class="hidden">o</li>
+    <li class="spaced">F</li>
+    <li class="hidden">a</li>
+    <li class="hidden">n</li>
+    <li class="hidden">c</li>
+    <li class="hidden">y</li>
+  </ul>
+  <script>
+    const text = document.querySelector(".text");
+    setTimeout(() => {
+      text.classList.toggle("hidden");
+    }, 1000);
+  </script>
+</body>
+
+</html>

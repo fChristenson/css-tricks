@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>letter falling</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <ul>
+    <li>T</li>
+    <li>h</li>
+    <li>i</li>
+    <li>s</li>
+    <li class="spaced">I</li>
+    <li>s</li>
+    <li class="spaced">S</li>
+    <li>o</li>
+    <li class="spaced">F</li>
+    <li>a</li>
+    <li>n</li>
+    <li>c</li>
+    <li>y</li>
+  </ul>
+
+  <script>
+    const letters = document.querySelectorAll("li");
+
+    setTimeout(() => {
+      Array.from(letters).forEach((letter, index) => {
+        setTimeout(() => {
+          letter.classList.toggle("show");
+        }, index * 150);
+      })
+    }, 1000);
+  </script>
+</body>
+
+</html>

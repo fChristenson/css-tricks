@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  font-family: 'Roboto';
+}
+
+.text {
+  position: fixed;
+  top: 50%;
+  letter-spacing: 1px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 42px;
+}
+
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+
+.text li.spaced {
+  padding-left: 16px;
+}
+
+.text.hidden li.hidden {
+  opacity: 0;
+  max-width: 0;
+}

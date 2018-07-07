@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  font-family: 'Roboto';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 280px;
+  height: 20px;
+  position: relative;
+}
+
+.rest {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.awesome-thing {
+  position: absolute;
+  top: 0;
+  left: 210px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.5s;
+  color: gold;
+  perspective: 500px;
+  padding-left: 4px;
+}
+
+.color-word {
+  color: crimson;
+}
+
+.awesome-thing.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.awesome-thing.hide {
+  opacity: 0;
+  transform: translateY(50px) rotateZ(90deg);
+}
