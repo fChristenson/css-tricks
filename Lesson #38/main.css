@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: steelblue;
+  height: 100vh;
+  font-family: 'Roboto';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  border: none;
+  width: 22px;
+  height: 22px;
+  padding: 22px;
+  background: url(./refresh.svg) center center no-repeat;
+}
+
+.pulse-icon {
+  animation: pulse 1s infinite linear;
+}
+
+.grow-icon {
+  animation: grow 1s infinite linear;
+}
+
+.bounce-icon {
+  animation: bounce 1s infinite linear;
+}
+
+.wiggle-icon {
+  animation: roll 1s infinite linear;
+}
+
+.buzz-icon {
+  animation: buzz 0.15s infinite linear;
+}
+
+@keyframes buzz {
+  50% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.5);
+  }
+  70% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg) translate(10px);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-180deg) translate(-10px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

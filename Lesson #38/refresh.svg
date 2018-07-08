@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_refresh_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_refresh_24px" transform="translate(-3.000000, -3.000000)">
+            <path d="M16.1791667,5.82083333 C14.85,4.49166667 13.0258333,3.66666667 11,3.66666667 C6.94833333,3.66666667 3.67583333,6.94833333 3.67583333,11 C3.67583333,15.0516667 6.94833333,18.3333333 11,18.3333333 C14.4191667,18.3333333 17.27,15.9958333 18.0858333,12.8333333 L16.1791667,12.8333333 C15.4275,14.9691667 13.3925,16.5 11,16.5 C7.96583333,16.5 5.5,14.0341667 5.5,11 C5.5,7.96583333 7.96583333,5.5 11,5.5 C12.5216667,5.5 13.8783333,6.1325 14.8683333,7.13166667 L11.9166667,10.0833333 L18.3333333,10.0833333 L18.3333333,3.66666667 L16.1791667,5.82083333 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+            <polygon id="Shape" points="0 0 22 0 22 22 0 22"></polygon>
+        </g>
+    </g>
+</svg>
