@@ -28,5 +28,5 @@ body {
   position: absolute;
   bottom: -140px;
   left: -5%;
-  background: radial-gradient(ellipse at center, black 0%, black 15%, white 22%,rgba(255, 255, 255, 0) 70%); 
+  background: radial-gradient(ellipse at center, black 15%, white 22%,rgba(255, 255, 255, 0) 70%); 
 }

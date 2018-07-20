@@ -34,5 +34,4 @@ nav, footer {
   height: var(--footer-height);
   text-align: center;
   color: ghostwhite;
-  clear: both; /*we need to clear the float*/
 }
