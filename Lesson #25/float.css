@@ -10,6 +10,7 @@
 
 body {
   background: steelblue;
+  min-height: 100vh;
 }
 
 main div {
@@ -34,4 +35,8 @@ nav, footer {
   height: var(--footer-height);
   text-align: center;
   color: ghostwhite;
+}
+
+footer {
+  clear: both;
 }
