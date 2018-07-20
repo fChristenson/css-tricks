@@ -23,19 +23,11 @@ body {
   position: relative;
   margin: 0 auto;
   width: 100px;
+  height: 100px;
 }
 
-.loader::before {
-  content: '';
-  display: block;
-  padding-top: 100%;
-}
-
-.circular {
+.circle {
   animation: rotate 2s linear infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .path {
@@ -53,15 +45,15 @@ body {
 
 @keyframes dash {
   0% {
-    stroke-dasharray: 1, 200;
+    stroke-dasharray: 1, 140;
     stroke-dashoffset: 0;
   }
   50% {
-    stroke-dasharray: 89, 200;
+    stroke-dasharray: 89, 140;
     stroke-dashoffset: -35px;
   }
   100% {
-    stroke-dasharray: 89, 200;
+    stroke-dasharray: 89, 140;
     stroke-dashoffset: -124px;
   }
 }
@@ -77,7 +69,6 @@ body {
   66% {
     stroke: var(--green);
   }
-  80%,
   90% {
     stroke: var(--yellow);
   }

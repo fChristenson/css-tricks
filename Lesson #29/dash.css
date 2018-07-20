@@ -1,0 +1,23 @@
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite;
+}
+
+.path2 {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: dash 3s linear infinite;
+}
+
+.path3 {
+  stroke-dasharray: 648;
+  stroke-dashoffset: 648;
+  animation: dash 3s linear alternate infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
