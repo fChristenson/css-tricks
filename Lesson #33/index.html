@@ -13,12 +13,12 @@
   <div>
     <div class="scene">
       <div class="cube">
-        <div class="cube__face cube__face--front">front</div>
-        <div class="cube__face cube__face--back">back</div>
-        <div class="cube__face cube__face--right">right</div>
-        <div class="cube__face cube__face--left">left</div>
-        <div class="cube__face cube__face--top">top</div>
-        <div class="cube__face cube__face--bottom">bottom</div>
+        <div class="cube__side--front">front</div>
+        <div class="cube__side--back">back</div>
+        <div class="cube__side--right">right</div>
+        <div class="cube__side--left">left</div>
+        <div class="cube__side--top">top</div>
+        <div class="cube__side--bottom">bottom</div>
       </div>
     </div>
     <p class="radio-group">
@@ -44,22 +44,21 @@
   </div>
   <script>
     const cube = document.querySelector('.cube');
-    const radioGroup = document.querySelector('.radio-group');
     let currentClass = '';
 
-    const changeSide = () => {
-      const checkedRadio = radioGroup.querySelector(':checked');
-      const showClass = 'show-' + checkedRadio.value;
+    const rotateCube = () => {
+      const checkedRadioButton = document.querySelector(':checked');
+      const sideToShowClass = checkedRadioButton.value;
       if (currentClass) {
         cube.classList.remove(currentClass);
       }
-      cube.classList.add(showClass);
-      currentClass = showClass;
+      cube.classList.add(sideToShowClass);
+      currentClass = sideToShowClass;
     }
 
-    changeSide();
+    rotateCube();
 
-    radioGroup.addEventListener('change', changeSide);
+    document.addEventListener('change', rotateCube);
   </script>
 </body>
 

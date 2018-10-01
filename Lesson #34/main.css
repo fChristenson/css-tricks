@@ -5,45 +5,36 @@
 }
 
 body {
-  background-color: #000;
+  background-color: black;
   height: 100vh;
-  font-family: 'Roboto';
+  font-family: "Source Code pro";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text {
-  position: fixed;
-  top: 50%;
-  letter-spacing: 1px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+ul {
   list-style: none;
-  border-bottom: 0;
 }
 
-.text.hidden {
-  border-bottom: 1px solid #fff;
-}
-
-.text li {
-  display: inline-block;
+li {
   float: left;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 32px;
-  color: #fff;
-  opacity: 1;
+  color: white;
   transition: all 0.5s ease-in-out;
   max-width: 42px;
 }
 
-.text.hidden li.spaced {
+.hidden-text li.spaced {
   padding-left: 0;
 }
 
-.text li.spaced {
+li.spaced {
   padding-left: 16px;
 }
 
-.text.hidden li.hidden {
+.hidden-text li.hidden {
   opacity: 0;
   max-width: 0;
 }

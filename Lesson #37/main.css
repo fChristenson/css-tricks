@@ -21,6 +21,7 @@ input {
 }
 
 .placeholder {
+  cursor: text;
   display: block;
   transform: translate3d(4px, -21px, 0) scale(1);
   color: black;

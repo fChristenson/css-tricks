@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <ul class="text hidden">
+  <ul id="foo" class="hidden-text">
     <li>T</li>
     <li class="hidden">h</li>
     <li class="hidden">i</li>
@@ -26,9 +26,9 @@
     <li class="hidden">y</li>
   </ul>
   <script>
-    const text = document.querySelector(".text");
+    const text = document.querySelector("#foo");
     setTimeout(() => {
-      text.classList.toggle("hidden");
+      text.classList.toggle("hidden-text");
     }, 1000);
   </script>
 </body>
