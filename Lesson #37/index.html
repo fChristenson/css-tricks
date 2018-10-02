@@ -16,6 +16,18 @@
       <label for="username" class="placeholder">username</label>
     </div>
   </form>
+  <script>
+    const input = document.querySelector("#username");
+    const label = document.querySelector("label");
+
+    input.addEventListener("change", e => {
+      if (e.target.value.length > 0) {
+        label.classList.add("has-content");
+      } else {
+        label.classList.remove("has-content");
+      }
+    })
+  </script>
 </body>
 
 </html>

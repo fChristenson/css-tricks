@@ -28,6 +28,7 @@ input {
   transition: all 0.3s;
 }
 
+.has-content,
 input:focus ~ .placeholder {
   color: white;
   transform: translate3d(-32px, -43px, 0) scale(0.5);
