@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: steelblue;
+}
+
+input {
+  outline: none;
+  width: 400px;
+  padding: 12px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dynamic placeholder</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <input type="email" placeholder="">
+  <script>
+    (async () => {
+      const validEmails = ["foo@bar.se", "bar@foo.net", "foobar@someplace.com"];
+      const prefixText = "Email e.g ".split("");
+      const input = document.querySelector("input");
+
+      const wait = (fn, timeout) => {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            resolve(fn())
+          }, timeout);
+        })
+      };
+
+      for (const letter of prefixText) {
+        await wait(() => {
+          input.placeholder += letter;
+        }, 100)
+      }
+
+      for (let i = 0; i < validEmails.length; i++) {
+        const text = validEmails[i].split("");
+        for (const letter of text) {
+          await wait(() => {
+            input.placeholder += letter;
+          }, 100)
+        }
+
+        await wait(() => { }, 500)
+
+        if (i === validEmails.length - 1) return;
+        let index = prefixText.length + text.length - 1;
+        for (const letter of text) {
+          await wait(() => {
+            input.placeholder = input.placeholder.substring(prefixText, index);
+            --index;
+          }, 100)
+        }
+      }
+    })()
+
+  </script>
+</body>
+
+</html>
